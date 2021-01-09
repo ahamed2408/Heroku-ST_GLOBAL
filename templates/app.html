@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ST Global Technologies</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>ST Global Technologies</h3>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+
+        <label for="Number of Captains">Number of Captains</label>
+        <input
+          type="text"
+          placeholder="Number of Captains"
+          class="u-full-width"
+          name="num1"
+        />
+
+        <label for="Enter Number of Minutes for a day(One day=1440 minutes)">Enter Number of Minutes for a day(One day=1440 minutes)</label>
+        <input
+          type="text"
+          placeholder="Total Time in Minutes"
+          class="u-full-width"
+          name="num2"
+        />
+        <label for="City">City</label>
+        <select class="u-full-width" name="City">
+          <option value="Riyadh">Riyadh</option>
+          <option value="Buraydah">Buraydah</option>
+          <option value="Ar Rass">Ar Rass</option>
+          <option value="Al-Qassim Province">Al-Qassim Province</option>
+          <option value="Al-Qassim">Al-Qassim</option>
+          <option value="Al Bukhariyah">Al Bukhariyah</option>
+        </select>
+
+        <input type="submit" value="Predict" id="calc_btn" />
+        <br />
+        <div class="alert">
+          <center>
+            <strong><h4>Orders can be made in a day will be</h4></strong>
+          </center>
+          <center>
+            <strong><h4>{{ sum }}</h4></strong>
+          </center>
+          
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
